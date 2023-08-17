@@ -1,8 +1,23 @@
 from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
+from django.contrib import auth
 
 # Create your views here.
 def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST.get('password')
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            print('You are now logged in')
+            return redirect('course-list')
+        else:
+            print('Invalid credentials')
+            return redirect('login')
+
     return render(request , 'accounts/login.html')
 
 def register(request):
@@ -19,16 +34,15 @@ def register(request):
             if User.objects.filter(username=username).exists():
                 #that username is taken
                 return redirect('register')
+            elif User.objects.filter(email=email).exists():
+                #that email is being used
+                return redirect('register')
             else:
-                if User.objects.filter(email=email).exists():
-                    #that email is being used
-                    return redirect('register')
-                else:
-                    #create a new user
-                    user = User.objects.create_user(username=username, email=email, first_name=first_name, last_name=last_name)
-                    user.save()
-                    #you are new registered and can login
-                    return redirect('login') 
+                #create a new user
+                user = User.objects.create_user(username=username, email=email,password=password_1, first_name=first_name, last_name=last_name)
+                user.save()
+                #you are new registered and can login
+                return redirect('login') 
         else:
             #passwords don't match
             return redirect('register')
