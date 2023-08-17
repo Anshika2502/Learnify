@@ -1,0 +1,16 @@
+.card-course{
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(47, 50, 56, 0.2), 0 3px 10px 0 rgba(47, 50, 56, 0.19);
+}
+
+.card-course img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pricing-text{
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+}

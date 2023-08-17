@@ -1,0 +1,20 @@
+[
+{
+  "model": "content.category",
+  "pk": 1,
+  "fields": {
+    "title": "Web Development",
+    "slug": "web-development",
+    "thumbnail": "categories/photos/img6.jpg"
+  }
+},
+{
+  "model": "content.category",
+  "pk": 2,
+  "fields": {
+    "title": "Mobile Development",
+    "slug": "mobile-development",
+    "thumbnail": "categories/photos/1.jpg"
+  }
+}
+]

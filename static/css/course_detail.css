@@ -1,0 +1,23 @@
+.list-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-item{
+    max-width: 240px;
+}
+
+.a:hover{
+    text-decoration: none;
+}
+
+.video_navbar a {
+    color: #95979a !important;
+    border: 1px solid #95979a;
+    padding: 8px;
+}
+
+.video_navbar a:hover{
+    color: white !important;
+    border-color: white;
+}

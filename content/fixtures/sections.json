@@ -1,0 +1,24 @@
+[
+    {
+        "model": "content.section",
+        "pk": 1,
+        "fields":{
+            "course": 1,
+            "title":"Introduction",
+            "slug":"introduction",
+            "description":"Install Xcode, creating a new SwiftUI project.",
+            "position": 1
+        }
+    },
+    {
+        "model": "content.section",
+        "pk": 2,
+        "fields":{
+            "course": 1,
+            "title":"Authentication Design Sign In Scene",
+            "slug":"authentication-design-sign-in-scene",
+            "description":"Learn how to design the sign in screen.",
+            "position": 2
+        }
+    }
+]
