@@ -4,11 +4,15 @@ from django.contrib import auth
 
 # Create your views here.
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('course-list')
+    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST.get('password')
 
         user = auth.authenticate(username=username, password=password)
+        print(user)
 
         if user is not None:
             auth.login(request, user)
@@ -20,6 +24,10 @@ def login(request):
     return render(request , 'accounts/login.html')
 
 def register(request):
+
+    if request.user.is_authenticated:
+        return redirect('course-list')
+    
     if request.method == 'POST':
         # get form input values
         first_name = request.POST['first_name']
@@ -47,4 +55,6 @@ def register(request):
     return render(request , 'accounts/register.html')
 
 def logout(request):
+    auth.logout(request)
+    #you are now logged out 
     return redirect('course-list')
