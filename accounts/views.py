@@ -14,9 +14,8 @@ def login(request):
             auth.login(request, user)
             print('You are now logged in')
             return redirect('course-list')
-        else:
-            print('Invalid credentials')
-            return redirect('login')
+        print('Invalid credentials')
+        return redirect('login')
 
     return render(request , 'accounts/login.html')
 
@@ -30,24 +29,22 @@ def register(request):
         password_1 = request.POST.get('password_1')
         password_2 = request.POST.get('password_2')
 
-        if password_1 == password_2:
-            if User.objects.filter(username=username).exists():
-                #that username is taken
-                return redirect('register')
-            elif User.objects.filter(email=email).exists():
-                #that email is being used
-                return redirect('register')
-            else:
-                #create a new user
-                user = User.objects.create_user(username=username, email=email,password=password_1, first_name=first_name, last_name=last_name)
-                user.save()
-                #you are new registered and can login
-                return redirect('login') 
-        else:
-            #passwords don't match
+        if password_1 != password_2:
+             #passwords don't match
             return redirect('register')
-    else:
-        return render(request , 'accounts/register.html')
+        if User.objects.filter(username=username).exists():
+             #that username is taken
+             return redirect('register')
+        if User.objects.filter(email=email).exists():
+             #that email is being used
+             return redirect('register')
+        
+        user = User.objects.create_user(username=username, email=email,password=password_1, first_name=first_name, last_name=last_name)
+        user.save()
+        #you are new registered and can login
+        return redirect('login')
+           
+    return render(request , 'accounts/register.html')
 
 def logout(request):
     return redirect('course-list')
