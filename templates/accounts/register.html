@@ -13,7 +13,7 @@ Register
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form action="{% url 'register' %}" method="POST">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="first_name">First Name</label>
@@ -33,11 +33,11 @@ Register
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password1" class= "form-control" required>
+                            <input type="password" name="password_1" class= "form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Confirm Password</label>
-                            <input type="password" name="password2" class= "form-control" required>
+                            <input type="password" name="password_2" class= "form-control" required>
                         </div>
                         <button type="submit" class="btn btn-black text-white" style="background-color: #000;">Register</button>
                     </form>
