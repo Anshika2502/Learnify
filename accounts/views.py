@@ -1,6 +1,7 @@
 from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
+from .forms import UpdateProfileForm
 
 # Create your views here.
 def login(request):
@@ -58,3 +59,26 @@ def logout(request):
     auth.logout(request)
     #you are now logged out 
     return redirect('course-list')
+
+
+def my_profile(request):
+
+    if request.method =='POST':
+        user = request.user
+        user.email = request.POST['email']
+        user.username = request.POST['username']
+        student_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.student)
+
+        if student_form.is_valid():
+            student_form.save()
+            user.save()
+            #your account has been updated
+            return redirect('my_profile')
+
+    student_form = UpdateProfileForm(instance=request.user.student)
+
+    context = {
+        'student' : request.user.student , 
+        'student_form' : student_form
+    }
+    return render(request , 'accounts/my_profile.html' , context)

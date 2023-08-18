@@ -43,7 +43,7 @@
             <img src="{{ user.student.avatar.url }}" class="rounded-circle" height="25" width="25" alt="">&nbsp; Welcome {{ user.username }}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">My Profile</a>
+            <a class="dropdown-item" href="{% url 'my_profile' %}">My Profile</a>
             <a class="dropdown-item" href="#">Subscription</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{% url 'logout' %}">
