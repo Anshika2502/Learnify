@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from .forms import UpdateProfileForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
@@ -60,7 +61,7 @@ def logout(request):
     #you are now logged out 
     return redirect('course-list')
 
-
+@login_required(login_url='/accounts/login')
 def my_profile(request):
 
     if request.method =='POST':

@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.shortcuts import reverse
+from accounts.models import Pricing
 
 # Create your models here.
 
@@ -18,6 +19,7 @@ class Category(models.Model):
         return self.title
     
 class Course(models.Model):
+    pricing_tiers = models.ManyToManyField(Pricing, blank=True)
     category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100 ,blank = True, unique = True)
