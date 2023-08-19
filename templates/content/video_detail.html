@@ -20,9 +20,7 @@ Learn
     <div class="row">
         <div class="col-9 px-0">
             <div class="embed-responsive embed-responsive-16by9">
-                <video autoplay loop controls controlsList="nodownload" poster="{{ object.thumbnail.url }}" class="embed-responsive-item">
-                    <source src="{{ object.video_url }}" type="video/mp4" />
-                </video>
+                <iframe class="embed-responsive-item" src="{{ object.video_url }}" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div class="col-3 px-0">

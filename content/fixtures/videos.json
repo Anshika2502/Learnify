@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "section": 1,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/9699e13b5593ad27b2c018ba47c9a8364d684bb4.mp4",
+            "video_url":"https://www.youtube.com/embed/v=2USszBtyQnQ",
             "thumbnail":"lessons/photos/swiftui-install-xcode.jpg",
             "title":"Install XCode",
             "slug": "install-xcode",
@@ -17,7 +17,7 @@
         "pk": 2,
         "fields": {
             "section": 1,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/bd251e3206c557b7e3fd8111800eb649fbac1e9c.mp4",
+            "video_url":"https://www.youtube.com/embed/v=tPWUsSELJyY",
             "thumbnail":"lessons/photos/swiftui-get-started.jpg",
             "title":"Get Started with SwiftUI: New Xcode Project",
             "slug": "get-started-with-swiftUI-new-xcode-project",
@@ -30,7 +30,7 @@
         "pk": 3,
         "fields": {
             "section": 2,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/41648b5b59de637ec69021ddf9864c43d3bd4e3c.mp4",
+            "video_url":"https://www.youtube.com/embed/v=fmiD_6aIstY",
             "thumbnail":"lessons/photos/sign-in-part-1.jpg",
             "title":"Adding Sign In Scene - Customise Sign In Part 1",
             "slug": "sign-in-scene-part-1",
@@ -43,7 +43,7 @@
         "pk": 4,
         "fields": {
             "section": 2,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/57dc9908d405ebcfc0b282a2cf6f608132a59052.mp4",
+            "video_url":"https://www.youtube.com/embed/v=XbK8Ep0ZWGQ",
             "thumbnail":"lessons/photos/sign-in-part-2.jpg",
             "title":"Adding Sign In Scene - Customise Sign In Part 2",
             "slug": "sign-in-scene-part-2",
@@ -56,7 +56,7 @@
         "pk": 5,
         "fields": {
             "section": 2,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/68c46b03c9c5b95455885eec47f92489bfcd21e2.mp4",
+            "video_url":"https://www.youtube.com/embed/v=CSkG2BaM330",
             "thumbnail":"lessons/photos/sign-in-part-3.jpg",
             "title":"Adding Sign In Scene - Customise Sign In Part 3",
             "slug": "sign-in-scene-part-3",
@@ -69,7 +69,7 @@
         "pk": 6,
         "fields": {
             "section": 2,
-            "video_url":"https://embed-ssl.wistia.com/deliveries/783c210521b6382e13eece76664d3b38a22e4bb6.mp4",
+            "video_url":"https://www.youtube.com/embed/v=08L_n3JRqBc",
             "thumbnail":"lessons/photos/sign-in-part-4.jpg",
             "title":"Adding Sign In Scene - Customise Sign In Part 4",
             "slug": "sign-in-scene-part-4",

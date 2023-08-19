@@ -25,9 +25,9 @@ class VideoDetailView(LoginRequiredMixin, CoursePermissionMixin, DetailView):
         course = get_object_or_404(Course , slug=self.kwargs["course_slug"])
         context['course'] = course
 
-        subscription = self.request.user.student.subscription
-        pricing_tier = subscription.pricing
+        #subscription = self.request.user.student.subscription
+        #pricing_tier = subscription.pricing
 
-        pricing_tier in course.pricing_tiers.all()
+        #pricing_tier in course.pricing_tiers.all()
 
         return context
