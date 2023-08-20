@@ -1,0 +1,81 @@
+[
+    {
+        "model":"content.video",
+        "pk": 1,
+        "fields": {
+            "section": 1,
+            "video_url":"https://www.youtube.com/embed/v=2USszBtyQnQ",
+            "thumbnail":"lessons/photos/swiftui-install-xcode.jpg",
+            "title":"Install XCode",
+            "slug": "install-xcode",
+            "description": "",
+            "position": 1
+        }
+    },
+    {
+        "model":"content.video",
+        "pk": 2,
+        "fields": {
+            "section": 1,
+            "video_url":"https://www.youtube.com/embed/v=tPWUsSELJyY",
+            "thumbnail":"lessons/photos/swiftui-get-started.jpg",
+            "title":"Get Started with SwiftUI: New Xcode Project",
+            "slug": "get-started-with-swiftUI-new-xcode-project",
+            "description": "",
+            "position": 2
+        }
+    },
+    {
+        "model":"content.video",
+        "pk": 3,
+        "fields": {
+            "section": 2,
+            "video_url":"https://www.youtube.com/embed/v=fmiD_6aIstY",
+            "thumbnail":"lessons/photos/sign-in-part-1.jpg",
+            "title":"Adding Sign In Scene - Customise Sign In Part 1",
+            "slug": "sign-in-scene-part-1",
+            "description": "",
+            "position": 1
+        }
+    },
+    {
+        "model":"content.video",
+        "pk": 4,
+        "fields": {
+            "section": 2,
+            "video_url":"https://www.youtube.com/embed/v=XbK8Ep0ZWGQ",
+            "thumbnail":"lessons/photos/sign-in-part-2.jpg",
+            "title":"Adding Sign In Scene - Customise Sign In Part 2",
+            "slug": "sign-in-scene-part-2",
+            "description": "",
+            "position": 2
+        }
+    },
+    {
+        "model":"content.video",
+        "pk": 5,
+        "fields": {
+            "section": 2,
+            "video_url":"https://www.youtube.com/embed/v=CSkG2BaM330",
+            "thumbnail":"lessons/photos/sign-in-part-3.jpg",
+            "title":"Adding Sign In Scene - Customise Sign In Part 3",
+            "slug": "sign-in-scene-part-3",
+            "description": "",
+            "position": 3
+        }
+    },
+    {
+        "model":"content.video",
+        "pk": 6,
+        "fields": {
+            "section": 2,
+            "video_url":"https://www.youtube.com/embed/v=08L_n3JRqBc",
+            "thumbnail":"lessons/photos/sign-in-part-4.jpg",
+            "title":"Adding Sign In Scene - Customise Sign In Part 4",
+            "slug": "sign-in-scene-part-4",
+            "description": "",
+            "position": 4
+        }
+    }
+
+]

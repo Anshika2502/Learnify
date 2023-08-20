@@ -1,0 +1,65 @@
+[
+    {
+        "model": "content.course",
+        "pk": 1,
+        "fields": {
+          "category": 2,
+          "name": "Build Instagram to Master SwiftUI and Firestore",
+          "slug": "build-instagram-to-master-swiftUI-and-firestore",
+          "thumbnail": "courses/thumbnails/swiftui.jpg",
+          "sub_title": "Learn how to build iOS applications using SwiftUI and Firestore",
+          "video_intro_url": "https://www.youtube.com/embed/v=tRVm-momgKc&pp=ygUtdHV0b3JpYWwgdG8gYnVpbGQgaW5zdGFncmFtIHRvIG1hc3RlciBzd2lmdHVp",
+          "description": "In this course , we will learn how to build our own instagram clone with SwiftUI framework.Throughout the process, you will develop high level programming, app design and app development skills.At the completion of the course, you will get all knowledge of social apps creation, building strong logics of app, app customisation, app designing, social app features, programming and many more.",
+          "created": "2023-08-10T19:23:52.604Z",
+          "is_published": true,
+          "is_featured": false
+        }
+      },
+      {
+        "model": "content.course",
+        "pk": 2,
+        "fields": {
+          "category": 2,
+          "name": "Build Full Realtime Messenger + Tinder App",
+          "slug": "build-full-time-realtime-messenger-tinder-app",
+          "thumbnail": "courses/thumbnails/tinder.jpg",
+          "sub_title": "Build Full Realtime Chat + Tinder App to Master iOS 12, Swift 5 and Firebase 5 ",
+          "video_intro_url": "https://www.youtube.com/embed/v=5uhzvWtdSN8",
+          "description": "This course is all about communication.We are going to create an awesome Chat/Dating app.",
+          "created": "2023-08-10T19:23:52.604Z",
+          "is_published": true,
+          "is_featured": false
+        }
+      },
+      {"model": "content.course",
+      "pk": 3,
+      "fields": {
+        "category": 2,
+        "name": "Build a Complete iOS Chat App",
+        "slug": "build-a-complete-iOS-chat-app",
+        "thumbnail": "courses/thumbnails/chat.jpg",
+        "sub_title": "Build Full Realtime Chat + Tinder App to Master iOS 12, Swift 5 and Firebase 5 ",
+        "video_intro_url": "https://www.youtube.com/embed/v=TLnohef5XqY",
+        "description": "This course is all about communication.We are going to create an awesome Chat/Dating app.",
+        "created": "2023-08-10T19:23:52.604Z",
+        "is_published": true,
+        "is_featured": false
+      }
+    },
+     {"model": "content.course",
+     "pk": 4,
+     "fields": {
+       "category": 1,
+       "name": "Build Ecommerce Website",
+       "slug": "build-ecommerce-website",
+       "thumbnail": "courses/thumbnails/django.jpg",
+       "sub_title": "Build Ecommerce ",
+       "video_intro_url": "https://www.youtube.com/embed/v=NmPOQo2iXhI",
+       "description": "In this course, we will learn how to build a fully functioning eCommerce website and application using Python Django Framework.",
+       "created": "2023-08-10T19:23:52.604Z",
+       "is_published": true,
+       "is_featured": false
+      }
+    }
+      
+]

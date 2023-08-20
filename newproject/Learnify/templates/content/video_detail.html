@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+Learn
+{% endblock title %}
+
+{% block video_header %}
+<div class="container-fluid bg-dark text-light">
+    <div class="row">
+       <div class="col-9 pt-3">
+          <h5>{{ course.name }}</h5>
+       </div>
+     <div class="col-3 text-right p-3 video_navbar">
+         <a href="{{ course.get_absolute_url }}">Course details<i class="fas fa-chevron right"></i></a>
+     </div>
+    </div>
+ </div>
+{% endblock video_header %}
+{% block body %}
+<div class="container-fluid bg-fluid">
+    <div class="row">
+        <div class="col-9 px-0">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ object.video_url }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-3 px-0">
+            <div class="border border-1">
+                <h6 class="font-weight-bold text-dark ml-2 mt-2 p-2">Course Content</h6>
+            {% for section in course.sections.all %}
+            <div class="accordion" id="accordionExample">
+                <div class="card border border-top-1 border-left-0 border-right-0 border-bottom-0 rounded-0">
+                  <div class="card-header pl-2" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-dark text-left text-decoration-none font-weight-bold" type="button" data-toggle="collapse" data-target="#{{ section.slug }}" aria-expanded="true" aria-controls="{{ section.slug }}">
+                        Section {{ section.position}}:{{ section.title }}
+                        <span><i class="fas fa-plus float-right"></i></span>
+                      </button>
+                    </h2>
+                </div>
+                  {% for video in section.videos.all %}
+                  <div id="{{ section.slug }}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <a href="{{ video.get_absolute_url }}" class="text-dark">
+                      {{video.position }}. {{ video.title }}</a>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+        
+            {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

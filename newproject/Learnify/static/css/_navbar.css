@@ -1,0 +1,67 @@
+.nav-text{
+    color: #505763 !important;
+    height: 45px;
+    line-height: 25px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.dropdown-item{
+    font-size: 14px !important;
+}
+
+.form-inline .input-group{
+    width: 500px;
+}
+
+#search-input{
+    width: 300px;
+    height: 50px;
+    background: #f2f3f5;
+    border: none;
+    border-radius: 0px;
+    padding-left: 20px;
+    color: #63717f;
+    font-size: 15px;
+}
+
+#search-input::placeholder{
+    color: #787f88;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+input:focus, input:active{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-group-text{
+    color: #f2f3f5;
+    border: none;
+    border-radius: 0px;
+}
+
+.input-group-text:focus, .input-group-text:active{
+    outline: none;
+}
+
+.nav-item .btn{
+    padding: 11px 12px !important;
+    font-size: 15px;
+    border-radius: 2px;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-left: 5px !important;
+}
+
+.btn:focus, .btn:active{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.nav-item .btn-log-in{
+    color: #fff !important;
+    background-color: #000;
+    border: 1px solid #000;
+}

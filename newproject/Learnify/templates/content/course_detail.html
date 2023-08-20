@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ object.name }}
+{% endblock title %}
+{% block body %}
+<div class="container mt-5">
+   <div class="row">
+      <div class="col-8">
+         <div class="card">
+            <div class="card-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video autoplay loop controls controlsList="nodownload" poster="{{ object.thumbnail.url }}" class="embed-responsive-item">
+                        <source src="{{ object.video_intro_url }}" type="video/mp4" />
+                    </video>
+                </div>
+                <h5 class="font-weight-bold mt-4">
+                    Description
+                </h5>
+                <p class="card-text">{{ object.description }}</p>
+            </div>
+         </div>
+      </div>
+<div class="col-4">
+   <div class="card">
+       <div class="card-body">
+            <div class="card-title font-weight-bold mb-3">{{object.name }}</div>
+            <div class="card-subtitle text-muted mb-3">{{ object.sub_title }}</div>
+            <p>
+               <a href="" class="btn btn-dark btn-block font-weight-bold">View</a>
+            </p>
+       </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title">
+            Zero2Launch Team
+        </h4>
+        <p class="card-subtitle">
+          Instructor
+        </p>
+    </div>
+    <div class="card-body">
+            The instructor's description 
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">
+        <i class="fas fa-th"></i>
+        &nbsp {{ object.category }}
+    </div>
+
+</div>
+</div>
+</div>
+<div class="row mt-5">
+    <div class="col-12">
+        <h5 class="font-weight-bold mb-3">
+            Curriculum for this course
+        </h5>
+        {% for section in course.sections.all %}
+        <div class="card mb-4">
+            <div class="card-body">
+              <div class="card-title font-weight-bold">
+                Section #{{ section.position }} - {{ section.title }}
+
+</div>
+<hr>
+<div class="list">
+    <div class="list-row">
+        {% for video in section.videos.all %}
+        <div class="list-item mb-5 mr-3">
+            <a href="{{ video.get_absolute_url }}"> 
+        <div>
+            <img src="{{ video.thumbnail.url }}" width="100%" alt="">
+        <div class="mt-2 text-dark">
+            <div class="card-text text-dark">
+                {{ video.position }}. {{ video.title }}
+            </div>
+            </div>
+        </a>
+        </div>
+    </div>
+        {% endfor %}
+   
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+{% endblock body %}
